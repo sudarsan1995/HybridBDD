@@ -10,8 +10,13 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features= {"src/test/resources/com/bdd/features"},
 		glue = {"com/bdd/stepDefinitions", "com/bdd/Hooks"},
-		plugin= {"pretty"},
-		monochrome=true
+		monochrome=true,
+		dryRun=false,
+		plugin= {"pretty",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+				}
+		
+		
 	
 		)
 

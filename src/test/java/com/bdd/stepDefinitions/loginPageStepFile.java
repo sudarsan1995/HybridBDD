@@ -10,7 +10,7 @@ import io.cucumber.java.en.*;
 
 public class loginPageStepFile {
 
-	private LoginPage lp = new LoginPage(DriverFactory.getDriver());
+	public LoginPage lp = new LoginPage(DriverFactory.getDriver());
 
 	@Given("user in the loginpage")
 	public void user_in_the_loginpage() {

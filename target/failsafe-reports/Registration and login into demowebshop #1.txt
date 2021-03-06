@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: Registration and login into demowebshop #1
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 71.581 s <<< FAILURE! - in Registration and login into demowebshop #1
+Registring user account in webshop portal(Registration and login into demowebshop #1)  Time elapsed: 71.581 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='result']"}
+  (Session info: MicrosoftEdge=89.0.774.45)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L-156180933', ip: '192.168.225.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 89.0.774.45, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:57169}, msedge: {msedgedriverVersion: 89.0.774.45 (bb55f48a0d369c..., userDataDir: C:\Users\SU316247\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ae5ecb2d865bbfeb5ee03080334162b
+*** Element info: {Using=xpath, value=//div[@class='result']}
+
