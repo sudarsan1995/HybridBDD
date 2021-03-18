@@ -10,6 +10,7 @@ import com.bdd.Utils.ConfigReader;
 import com.bdd.driverfactory.DriverFactory;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
@@ -43,9 +44,32 @@ public class Hooks {
 		 driver.quit();
 	 }
 	 
-	 @After(order=1)
+	 /*
+	 @After(order=0)
 	 public void get_Screenshot(Scenario scenario)
 	 {
+		
+		 
+		 if(scenario.isFailed())
+		 {
+			 String screenshotname=scenario.getName().replaceAll("", "_");
+			 
+			 byte[] sourcepath= ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+			 scenario.attach(sourcepath, "image/png", screenshotname);
+			 
+		 }
+		
+			 
+		 }
+		*/
+	
+		 
+	 
+
+	 @AfterStep
+	 public void getScreenshot_EachStep(Scenario scenario)
+	 {
+			
 		
 		 if(scenario.isFailed())
 		 {
@@ -55,9 +79,17 @@ public class Hooks {
 			 scenario.attach(sourcepath, "image/png", screenshotname);
 			 
 		 }
-		 	
+		 else {
+			 
+		 String screenshotname=scenario.getName();
+		 byte[] sourcepath= ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+		 scenario.attach(sourcepath, "image/png", screenshotname);
+	 }
+	
 	 }
 	 
 	 
-	 
+ 
 }
+	 
+
