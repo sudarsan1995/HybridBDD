@@ -2,12 +2,14 @@ package com.bdd.Hooks;
 
 import java.util.Properties;
 
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.bdd.Utils.ConfigReader;
 import com.bdd.driverfactory.DriverFactory;
+
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -20,8 +22,8 @@ public class Hooks {
 	 private WebDriver driver;
 	 private ConfigReader configread;
 	 Properties pro;
-	 
-	 
+	
+	
 	 @Before(order=0)
 	 public void get_Property()
 	 {
